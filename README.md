@@ -17,4 +17,11 @@ Subset of features missing compared to crunch
 * inverting (use a pipe and "rev" for that)
 * limit duplicate characters
 
+Download
+--------
+
+Download latest version from bintray 
+
+[ ![Download](https://api.bintray.com/packages/pfichtner/generic/jcrunch/images/download.png) ](https://bintray.com/pfichtner/generic/jcrunch/_latestVersion)
+
 [![Build Status](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/badge/icon)](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/)
