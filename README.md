@@ -16,3 +16,5 @@ Subset of features missing compared to crunch
 * splitting (use a pipe and "split" for that)
 * inverting (use a pipe and "rev" for that)
 * limit duplicate characters
+
+[![Build Status](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/badge/icon)](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/)
