@@ -1,27 +1,21 @@
+# jcrunch [![Build Status](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/badge/icon)](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/)
+
 A wordlist generator written in 100% Java, very similar to [crunch](http://crunch-wordlist.sourceforge.net) 
 
-Features
---------
+## Features
 * crunch generates wordlists in permutation way only
 * resume support
 * pattern supports all numbers, symbols, upper and lower case characters 
 * permutation prediction on first line (can be disabled)
 
-Enhanced features compared to crunch
-------------------------------------
+## Enhanced features compared to crunch
 * order of charset content can be chosen freely
 
-Subset of features missing compared to crunch
----------------------------------------------
+## Subset of features missing compared to crunch
 * splitting (use a pipe and "split" for that)
 * inverting (use a pipe and "rev" for that)
 * limit duplicate characters
 
-Download
---------
+## Download
+You can download the latest version of [ jcrunch ](https://bintray.com/pfichtner/generic/jcrunch/_latestVersion) from bintray. 
 
-Download latest version from bintray 
-
-[ ![Download](https://api.bintray.com/packages/pfichtner/generic/jcrunch/images/download.png) ](https://bintray.com/pfichtner/generic/jcrunch/_latestVersion)
-
-[![Build Status](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/badge/icon)](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/)
