@@ -19,3 +19,6 @@ A wordlist generator written in 100% Java, very similar to [crunch](http://crunc
 ## Download
 You can download the latest version of [ jcrunch ](https://bintray.com/pfichtner/generic/jcrunch/_latestVersion) from bintray. 
 
+## License
+
+Copyright 2014 Peter Fichtner - Released under the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0.html)
