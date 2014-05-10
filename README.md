@@ -17,7 +17,7 @@ A wordlist generator written in 100% Java, very similar to [crunch](http://crunc
 * limit duplicate characters
 
 ## Download
-You can download the latest version of [ jcrunch ](https://bintray.com/pfichtner/generic/jcrunch/_latestVersion) from bintray. 
+You can download the latest version of [ jcrunch ](https://github.com/pfichtner/jcrunch/releases/latest) from github's release page. 
 
 ## License
 
