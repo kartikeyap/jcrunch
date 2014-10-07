@@ -12,6 +12,8 @@ public class NumberSystems {
 
 	public static final NumberSystem OCTAL = newNumberSystem(8);
 
+	public static final NumberSystem HEX = newNumberSystem(16);
+
 	private static NumberSystem newNumberSystem(int base) {
 		return new NumberSystem(DIGITS.substring(0, base));
 	}

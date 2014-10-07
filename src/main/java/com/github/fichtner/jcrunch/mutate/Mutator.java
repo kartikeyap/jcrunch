@@ -1,14 +1,17 @@
 package com.github.fichtner.jcrunch.mutate;
 
+import static com.google.common.base.CharMatcher.anyOf;
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Predicates.alwaysTrue;
+import static com.google.common.collect.Iterators.filter;
+
 import java.math.BigDecimal;
 import java.util.Iterator;
 
 import com.github.fichtner.jcrunch.numsys.NumberSystem;
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Predicate;
-import com.google.common.base.Predicates;
 import com.google.common.base.Strings;
-import com.google.common.collect.Iterators;
 import com.google.common.math.LongMath;
 
 public class Mutator {
@@ -20,9 +23,7 @@ public class Mutator {
 
 		public CharMatcherFilter(String string) {
 			this.string = string;
-			// TODO all chars of "string" must be included in
-			// numberSystem#getDigits
-			this.charMatcher = CharMatcher.anyOf(string);
+			this.charMatcher = anyOf(string);
 		}
 
 		public String getString() {
@@ -87,7 +88,7 @@ public class Mutator {
 
 	private final int maxLength;
 
-	private Predicate<String> filter = Predicates.alwaysTrue();
+	private Predicate<String> filter = alwaysTrue();
 
 	private long startAt;
 
@@ -102,12 +103,15 @@ public class Mutator {
 	 * with a,b,c,x there is no need to retry all the combinations already tried
 	 * (like aaa, aab) and so on but only those where "x" is in place.
 	 * 
-	 * @param string
+	 * @param mustMatch
 	 *            characters which must be contained in mutation string
 	 * @return this Mutator
 	 */
-	public Mutator outputOnlyIfContains(final String string) {
-		this.filter = new CharMatcherFilter(string);
+	public Mutator outputOnlyIfContains(final String mustMatch) {
+		String digits = this.numberSystem.getDigits();
+		checkArgument(anyOf(digits).matchesAllOf(mustMatch),
+				"%s must contain only characters of %s", mustMatch, digits);
+		this.filter = new CharMatcherFilter(mustMatch);
 		return this;
 	}
 
@@ -122,9 +126,8 @@ public class Mutator {
 			public Iterator<String> iterator() {
 				Itr itr = new Itr();
 				return Mutator.this.filter == null
-						|| Mutator.this.filter == Predicates
-								.<String> alwaysTrue() ? itr : Iterators
-						.filter(itr, Mutator.this.filter);
+						|| alwaysTrue().equals(Mutator.this.filter) ? itr
+						: filter(itr, Mutator.this.filter);
 			}
 		};
 	}

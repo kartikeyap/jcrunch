@@ -1,5 +1,7 @@
 package com.github.fichtner.jcrunch.numsys;
 
+import static com.github.fichtner.jcrunch.numsys.NumberSystems.DUAL;
+import static com.github.fichtner.jcrunch.numsys.NumberSystems.HEX;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -82,6 +84,12 @@ public class NumberSystemTest {
 		assertEquals(8, ns.toDecimal("aa"));
 		assertEquals(16, ns.toDecimal("bab"));
 		assertEquals(100, ns.toDecimal("bcacb"));
+	}
+
+	@Test
+	public void testHexToBin() {
+		assertEquals("11111111", DUAL.from(HEX, "FF"));
+		assertEquals("100000000", DUAL.from(HEX, "100"));
 	}
 
 }

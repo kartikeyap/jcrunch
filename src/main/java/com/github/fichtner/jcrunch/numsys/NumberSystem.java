@@ -37,12 +37,17 @@ public class NumberSystem {
 		if (dec == 0) {
 			return String.valueOf(this.digits[0]);
 		}
+		// TODO What's the result size? -> Pass capacity
 		StringBuilder sb = new StringBuilder();
 		while (dec > 0) {
-			sb.append(this.digits[checkedCast(dec % this.numDigits)]);
+			sb.insert(0, this.digits[checkedCast(dec % this.numDigits)]);
 			dec /= this.numDigits;
 		}
-		return sb.reverse().toString();
+		return sb.toString();
+	}
+
+	public String from(NumberSystem other, String value) {
+		return fromDecimal(other.toDecimal(value));
 	}
 
 	public long toDecimal(String string) {
@@ -58,4 +63,5 @@ public class NumberSystem {
 		}
 		return result;
 	}
+
 }
