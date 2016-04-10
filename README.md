@@ -1,4 +1,4 @@
-# jcrunch [![Build Status](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/badge/icon)](https://buildhive.cloudbees.com/job/pfichtner/job/jcrunch/)
+# jcrunch [![Build Status](https://travis-ci.org/pfichtner/jcrunch.svg?branch=master)](https://travis-ci.org/pfichtner/jcrunch)
 
 A wordlist generator written in 100% Java, very similar to [crunch](http://crunch-wordlist.sourceforge.net) 
 
@@ -17,7 +17,7 @@ A wordlist generator written in 100% Java, very similar to [crunch](http://crunc
 * limit duplicate characters
 
 ## Download
-You can download the latest version of [ jcrunch ](https://github.com/pfichtner/jcrunch/releases/latest) from github's release page. 
+You can download the latest version of [jcrunch](https://github.com/pfichtner/jcrunch/releases/latest) from github's release page. 
 
 ## License
 
